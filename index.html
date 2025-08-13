@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile</title>
+    <!-- Add Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header with Logo and Navigation Bar -->
+    <header>
+        <div class="logo">
+            <img src="https://cdn-sdotid.adg.id/images/28c630f0-a2f4-445c-8f89-f66b14b6ff8f_499x499.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profile">Our Profile</a></li>
+                <li><a href="#headquarters">Achievement</a></li>
+                <li><a href="#message">Message Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Welcome Section (Home Page) -->
+    <section id="home">
+        <h1>Hi <span id="userName">Guest</span>, Welcome To Our Website</h1>
+        <p>This is the first website practice by Moh Rofiqi</p>
+    </section>
+
+    <!-- Our Profile Section -->
+    <section id="profile">
+        <h2>Our Profile</h2>
+        <img src="https://cdn-sdotid.adg.id/images/28c630f0-a2f4-445c-8f89-f66b14b6ff8f_499x499.png"
+            alt="Company Banner" class="banner">
+        <h3>About the Company</h3>
+        <p>Welcome to our company! We are a leading IT solutions provider and professional design firm. Our core mission
+            is to blend technology and creativity to provide the best IT services and design solutions to our clients.
+            With years of experience in the industry, we have worked with clients from diverse sectors, helping them
+            streamline their operations, improve their digital presence, and achieve business goals efficiently.</p>
+        <p>Our team comprises highly skilled IT professionals and innovative designers who are committed to delivering
+            exceptional services. Whether you're looking for cutting-edge software solutions, website development, or
+            engaging graphic designs, we are here to assist you in every step of your digital journey.</p>
+        <p>We believe that technology and design should work hand in hand to create meaningful experiences for users.
+            Our commitment is to use our expertise to provide effective, scalable, and reliable IT solutions while
+            simultaneously creating beautiful and user-friendly designs.</p>
+        <p>At our company, we focus on understanding the unique needs of each client, and we tailor our solutions to
+            ensure that they meet their specific requirements. Our approach is customer-centric, and we value long-term
+            relationships with our clients, built on trust, transparency, and quality service.</p>
+
+        <h3>Vision & Mission</h3>
+        <p><strong>Vision:</strong> To be a world leader in IT solutions and design, empowering businesses and
+            individuals to succeed in the digital age.</p>
+        <p><strong>Mission:</strong> We are dedicated to providing high-quality IT solutions and innovative design
+            services that help businesses optimize their processes, enhance their digital presence, and improve user
+            experience. Our mission is to create value for our clients by delivering impactful results through
+            technology and creativity.</p>
+    </section>
+
+    <!-- Our Headquarters Section -->
+    <section id="headquarters">
+        <h3>Our Headquarters</h3>
+        <div class="headquarters">
+            <div class="location">
+                <div class="circle">
+                    <i class="fas fa-laptop-code"></i> <!-- Icon for Profesional IT -->
+                </div>
+                <p>Profesional IT</p>
+            </div>
+            <div class="location">
+                <div class="circle">
+                    <i class="fas fa-paint-brush"></i> <!-- Icon for Desainer Digital -->
+                </div>
+                <p>Desainer Digital</p>
+            </div>
+            <div class="location">
+                <div class="circle">
+                    <i class="fas fa-gamepad"></i> <!-- Icon for Gamer All in -->
+                </div>
+                <p>Gamer All in</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Message Form Section -->
+    <section id="message">
+        <h2>Message Us</h2>
+        <form id="messageForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" required></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Output Section for Form Data -->
+    <div id="formOutput"></div>
+
+    <!-- Link to JavaScript file (make sure the path is correct) -->
+    <script src="js/script.js"></script> <!-- Path to your script.js file -->
+</body>
+
+</html>
