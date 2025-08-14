@@ -1,307 +1,110 @@
-/* General Styles */
+/* General Styling */
+* {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
 }
 
-/* Header Styling */
-header {
-    background-color: #00c1f1;
-    /* Navbar background */
-    color: white;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
+/* Fade In Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
 }
 
-/* Logo Styling */
-header .logo img {
-    width: 50px;
-    /* Adjust the size of the logo */
-}
-
-/* Navbar Styling */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    /* Horizontally arrange the navbar items */
-}
-
-nav li {
-    margin: 0 12px;
-    /* Spacing between navbar items */
-}
-
-/* Navbar link styling */
-nav a {
-    text-decoration: none;
-    /* Remove underline */
-    color: white;
-    /* White text */
-    font-size: 16px;
-    /* Smaller text */
-    font-weight: bold;
-    letter-spacing: 1px;
-    /* Space between letters */
-    text-transform: uppercase;
-    /* Uppercase text */
-    padding: 5px 10px;
-    border-radius: 5px;
-    /* Round corners slightly */
-    transition: all 0.3s ease;
-    /* Smooth transition */
-}
-
-/* 3D Hover Effect for Navbar Links */
-nav a:hover {
-    color: #4CAF50;
-    /* Green hover effect */
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8), 0 0 25px rgba(0, 255, 0, 0.6);
-    transform: translateY(-4px);
-    /* Lift the link up */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    /* Add shadow */
-}
-
-nav a:active {
-    transform: translateY(2px);
-    /* Push the link down when clicked */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    /* Slight shadow */
-}
-
-/* Banner Image Styling */
-.banner {
-    width: 100%;
-    height: auto;
-}
-
-/* Headquarters Section */
-#headquarters {
-    text-align: center;
-}
-
-.headquarters {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 50px;
-}
-
-.location {
-    text-align: center;
-}
-
-/* Message Form Section */
-#message {
-    background-color: white;
-    padding: 30px;
-    margin: 20px auto;
-    width: 90%;
-    max-width: 800px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    /* Subtle box shadow */
-    border-radius: 8px;
-    text-align: center;
-}
-
-/* Heading */
-#message h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-/* Form Group Styling */
-.form-group {
-    margin-bottom: 15px;
-    /* Reduced margin between each field */
-}
-
-/* Label Styling */
-form label {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 5px;
-    font-weight: bold;
-    /* Bold labels */
-}
-
-/* Input and Textarea Fields */
-form input,
-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-top: 5px;
-    /* Reduced margin between label and input */
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    box-sizing: border-box;
-    transition: all 0.3s ease-in-out;
-}
-
-/* 3D Effect on Input Fields */
-form input:focus,
-form textarea:focus {
-    border: 1px solid #4CAF50;
-    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.4);
-    /* Green glow */
-    outline: none;
-}
-
-/* Button Style */
-form button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
+.fade-in.visible {
+    opacity: 1;
     transform: translateY(0);
-    /* Initial position for 3D effect */
 }
 
-/* 3D Effect on Button */
-form button:hover {
-    background-color: #45a049;
-    transform: translateY(-4px);
-    /* Button lifts up */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-    /* Deeper shadow */
+/* Hero Section Styling */
+.hero-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-form button:active {
-    transform: translateY(2px);
-    /* Button moves down slightly when clicked */
+.typing-animation {
+    border-right: 2px solid #667eea;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
-/* Form Output Styling */
-#formOutput {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #message {
-        width: 90%;
-        /* More width on small screens */
-        padding: 20px;
+@keyframes typing {
+    from {
+        width: 0;
     }
 
-    #message h2 {
-        font-size: 30px;
-    }
-
-    form input,
-    form textarea,
-    form button {
-        font-size: 14px;
-        /* Smaller font size for mobile */
-        padding: 10px;
+    to {
+        width: 100%;
     }
 }
 
-/* Text Alignment for labels and inputs */
-form label {
-    text-align: left;
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #667eea;
+    }
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+/* Hamburger Menu */
+.hamburger span {
     display: block;
-    font-size: 16px;
-    margin-bottom: 5px;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: 0.3s;
 }
 
-/* General Section Styling */
-section {
-    padding: 20px;
-    margin: 20px;
-    border: 1px solid #ddd;
-    text-align: justify;
-    /* Align text to both left and right */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-/* Circle Styling for Headquarters Section */
-.circle {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background-color: #f4f4f4;
-    border: 2px solid #ddd;
-    margin-bottom: 10px;
-    display: inline-block;
-    font-size: 40px;
-    /* Adjust icon size */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
 }
 
-.location p {
-    font-size: 16px;
-    font-weight: normal;
-    margin-top: 10px;
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        /* Stack logo and navbar vertically */
-        text-align: center;
+/* Floating Animation */
+.floating-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
     }
 
-    nav ul {
-        display: block;
-        /* Stack navbar items vertically */
-        padding: 20px 0;
-    }
-
-    nav li {
-        margin: 10px 0;
+    50% {
+        transform: translateY(-20px);
     }
 }
 
-/* Remove underline from navbar links */
-nav a {
-    text-decoration: none;
-    /* Ensures there is no underline */
-    color: white;
-    /* White color for the links */
-    font-size: 13px;
-    /* Set font size for readability */
-    letter-spacing: 1px;
-    /* Space between letters */
-    text-transform: uppercase;
-    /* Make the links uppercase */
-    transition: all 0.3s ease;
-    /* Smooth transition on hover */
-}
-
-/* Hover effect for navbar links */
-nav a:hover {
-    color: #070707;
-    /* Change color on hover */
-    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.8);
-    /* Add glow effect */
-    transform: scale(1.1);
-    /* Slight zoom effect */
-}
-
-/* Section Styles */
-#home {
-    background-color: lightgray;
-    text-align: center;
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }

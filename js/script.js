@@ -1,28 +1,58 @@
-// JavaScript to handle form submission
-document.getElementById("messageForm").onsubmit = function (event) {
-    event.preventDefault(); // Prevent the default form submission
+// Mobile menu functionality
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileLinks = document.querySelectorAll('.mobile-link');
 
-    // Capture the values of the form inputs
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let phone = document.getElementById("phone").value;
-    let message = document.getElementById("message").value;
+mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    mobileMenuBtn.classList.toggle('active');
+});
 
-    // Validate that all fields have been filled out
-    if (name === "" || email === "" || phone === "" || message === "") {
-        alert("Please fill all fields.");
-        return;
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        mobileMenuBtn.classList.remove('active');
+    });
+});
+
+// Close mobile menu when clicking outside
+mobileMenu.addEventListener('click', (e) => {
+    if (e.target === mobileMenu) {
+        mobileMenu.classList.remove('open');
+        mobileMenuBtn.classList.remove('active');
+    }
+});
+
+// Typing animation for hero text
+const typingText = document.querySelector('.typing-animation');
+if (typingText) {
+    const text = typingText.textContent;
+    typingText.textContent = '';
+    let i = 0;
+
+    function typeWriter() {
+        if (i < text.length) {
+            typingText.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100);
+        }
     }
 
-    // Create an HTML string with the form data
-    let output = `
-        <h3>Message Submitted:</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Message:</strong> ${message}</p>
-    `;
+    setTimeout(typeWriter, 1000);
+}
 
-    // Display the output in the #formOutput div
-    document.getElementById("formOutput").innerHTML = output;
-};
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+
