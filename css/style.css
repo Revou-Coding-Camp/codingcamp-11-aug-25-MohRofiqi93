@@ -25,10 +25,10 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-.typing-animation {
+/* .typing-animation {
     border-right: 2px solid #667eea;
     animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
+} */
 
 @keyframes typing {
     from {
@@ -153,11 +153,11 @@ body {
     /* Rotasi 3D saat hover */
 }
 
-/* Typing Animation for Text */
+/* Typing Animation for Text
 .typing-animation {
     border-right: 2px solid #667eea;
     animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
-}
+} */
 
 @keyframes typing {
     from {
@@ -434,10 +434,10 @@ body {
     background-clip: text;
 }
 
-.typing-animation {
+/* .typing-animation {
     border-right: 2px solid #667eea;
     animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
+} */
 
 @keyframes typing {
     from {
@@ -458,5 +458,35 @@ body {
 
     50% {
         border-color: #667eea;
+    }
+}
+
+
+
+/* ANIMASI DI ID BAGROUND "ID=HOME" */
+/* Typing animation */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.typing-animation {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-left: 1px solid rgba(155, 155, 155, 0.75);
+    /* Sesuaikan border untuk kursor lebih rapat */
+    animation: typing 4s steps(30) 1s 1 normal both, blink-caret 0.22s step-end infinite;
+}
+
+/* Blink effect for the cursor */
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
     }
 }

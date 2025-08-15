@@ -183,3 +183,11 @@ document.addEventListener('DOMContentLoaded', function () {
 document.getElementById('startBtn').addEventListener('click', function () {
     window.location.href = 'roadmap.html'; // Mengarahkan ke roadmap.html saat tombol diklik
 });
+
+// JavaScript untuk mengatur ulang animasi saat halaman dimuat ulang
+window.addEventListener('load', () => {
+    const typingElement = document.getElementById('typing-text');
+    typingElement.style.animation = 'none'; // Hapus animasi yang ada
+    typingElement.offsetHeight; // Trigger reflow
+    typingElement.style.animation = ''; // Menambahkan kembali animasi untuk mengulang
+});
