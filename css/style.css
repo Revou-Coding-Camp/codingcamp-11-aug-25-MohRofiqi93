@@ -108,3 +108,355 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
+/* General Styling */
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+
+/* animasi di visi dan misi */
+/* Global Styles */
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* 3D Icon Animation */
+.icon-container {
+    display: inline-block;
+    perspective: 1000px;
+    transition: transform 0.5s ease;
+}
+
+.icon-3d {
+    transition: transform 0.3s ease;
+}
+
+.icon-container:hover .icon-3d {
+    transform: rotate(360deg);
+    /* Rotasi 3D saat hover */
+}
+
+/* Typing Animation for Text */
+.typing-animation {
+    border-right: 2px solid #667eea;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #667eea;
+    }
+}
+
+/* Fade In for Sections */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .md\:text-left {
+        text-align: center;
+    }
+}
+
+/* ====================================== */
+
+
+/* Stat Box 3D Effect */
+.stat-box {
+    display: inline-block;
+    perspective: 1000px;
+    /* Add perspective for 3D effect */
+    transition: transform 1s ease;
+}
+
+/* Animated Number */
+.stat-number {
+    transform: scale(0);
+    animation: scaleUp 1s ease-in-out forwards, rotate3dEffect 2s ease-in-out infinite;
+}
+
+/* Animation for Scaling Number */
+@keyframes scaleUp {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* 3D Rotation Animation */
+@keyframes rotate3dEffect {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    25% {
+        transform: rotateY(10deg);
+    }
+
+    50% {
+        transform: rotateY(20deg);
+    }
+
+    75% {
+        transform: rotateY(10deg);
+    }
+
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+/* Line Animation for the number indicator */
+.stat-box .w-12 {
+    width: 0;
+    height: 0.3rem;
+    background-color: #3b82f6;
+    animation: lineExpand 2s ease-out 0.5s forwards;
+}
+
+/* Line expand animation */
+@keyframes lineExpand {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 3rem;
+        /* Expand to full width */
+    }
+}
+
+/* 3D Hover Effect on Cards */
+.stat-box:hover {
+    transform: rotateY(10deg);
+    /* 3D effect when hovering */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-out;
+}
+
+/* Adding a shadow effect */
+.stat-number {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* =================================================
+====================================================== */
+/* BAGIAN ATAS */
+
+* {
+    scroll-behavior: smooth;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease;
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s ease;
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s ease;
+}
+
+.scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hero-bg {
+    background: linear-gradient(135deg, #0682ca 0%, #9bb601 100%);
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.floating-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.typing-animation {
+    border-right: 2px solid #667eea;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #667eea;
+    }
+}
