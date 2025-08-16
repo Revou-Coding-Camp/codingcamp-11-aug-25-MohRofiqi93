@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
@@ -22,7 +23,9 @@
                     <div class="bg-gradient-to-r from-blue-600 to-green-600 p-2 rounded-full">
                         <i class="fas fa-code text-white text-xl"></i>
                     </div>
-                    <span class="text-xl font-bold gradient-text">TechCorp</span>
+                    <span class="text-xl font-bold gradient-text">TechCorp
+                        <span class="text-xs font-normal text-gray-100 ml-0,4">by Rofiqi</span>
+                    </span>
                 </div>
 
                 <!-- Desktop Navigation -->
@@ -86,37 +89,43 @@
         <div class="absolute bottom-20 right-10 w-32 h-32 bg-white bg-opacity-5 rounded-full animate-pulse"></div>
         <div class="absolute top-1/2 right-20 w-16 h-16 bg-white bg-opacity-10 rounded-full floating-animation"></div>
 
-        <div class="container mx-auto px-4 text-center relative z-10">
-            <div class="fade-in">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6">
-                    Halo <span id="userName" class="text-yellow-300 animate-pulse">Guest</span>!
-                </h1>
-                <div class="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
-                    <p id="typing-text" class="typing-animation overflow-hidden whitespace-nowrap mx-auto">
-                        Selamat datang di website pertama karya Moh Rofiqi
-                    </p>
-                </div>
-                <div class="flex justify-center space-x-4 mb-12">
-                    <a href="roadmap/roadmap.html">
-                        <button
-                            class="press bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transform hover:scale-105 transition duration-300 shadow-lg">
-                            <i class="fas fa-rocket mr-2"></i>Mulai Eksplorasi
-                        </button>
-                    </a>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="Image/image1.jpg" alt="Image 1">
 
-                    <a href="game/game.html">
-                        <button
-                            class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transform hover:scale-105 transition duration-300">
-                            <i class="fas fa-play mr-2"></i>NgeGameYuk
-                        </button>
-                    </a>
-                </div>
-                <div class="floating-animation">
-                    <i class="fas fa-chevron-down text-4xl opacity-70 animate-bounce"></i>
-                </div>
+            </div>
+
+            <!-- <button class="carousel-prev">&#10094;</button>
+            <button class="carousel-next">&#10095;</button>
+
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div> -->
+        </div>
+
+        <!-- Hero Text Content -->
+        <div class="hero-content relative z-10">
+            <h1>Halo <span id="userName" class="text-yellow-300 animate-pulse">Guest</span>!</h1>
+            <p id="typing-text" class="typing-animation overflow-hidden whitespace-nowrap mx-auto">
+                Selamat datang di website pertama karya Moh Rofiqi
+            </p>
+            <div class="button-container">
+                <a href="roadmap/roadmap.html">
+                    <button>
+                        <i class="fas fa-rocket mr-2"></i>Mulai Eksplorasi
+                    </button>
+                </a>
+                <a href="game/game.html">
+                    <button>
+                        <i class="fas fa-play mr-2"></i>NgeGameYuk
+                    </button>
+                </a>
             </div>
         </div>
     </section>
+
 
     <!-- Profile Section -->
     <section id="profile" class="py-20 bg-white relative">

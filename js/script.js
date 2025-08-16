@@ -191,3 +191,47 @@ window.addEventListener('load', () => {
     typingElement.offsetHeight; // Trigger reflow
     typingElement.style.animation = ''; // Menambahkan kembali animasi untuk mengulang
 });
+
+
+
+// SLIDE BACKROUND
+
+// JavaScript for controlling the carousel
+let currentIndex = 0;
+const slides = document.querySelector('.carousel-slide');
+const images = document.querySelectorAll('.carousel-slide img');
+const prevButton = document.querySelector('.carousel-prev');
+const nextButton = document.querySelector('.carousel-next');
+const dots = document.querySelectorAll('.carousel-dots span');
+
+// Update the position of the carousel to show the current image
+function updateCarousel() {
+    const slideWidth = images[0].clientWidth;
+    slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+    // Update active dot
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentIndex].classList.add('active');
+}
+
+// Event listeners for navigation buttons
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+    updateCarousel();
+});
+
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+    updateCarousel();
+});
+
+// Event listeners for dots
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel();
+    });
+});
+
+// Initialize the carousel
+updateCarousel();

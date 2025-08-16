@@ -30,6 +30,23 @@ body {
     animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 } */
 
+.small-text {
+    font-size: 0.2rem;
+    /* Sangat kecil */
+    position: absolute;
+    bottom: -10px;
+    /* Menempatkan teks lebih dekat ke bawah */
+    right: -10px;
+    /* Menempatkan teks lebih dekat ke kanan */
+    color: #999;
+    /* Warna abu-abu agar lebih terlihat kecil */
+    transform: translate(50%, 50%);
+    /* Sedikit pergeseran agar lebih rapi */
+}
+
+
+
+
 @keyframes typing {
     from {
         width: 0;
@@ -464,29 +481,127 @@ body {
 
 
 /* ANIMASI DI ID BAGROUND "ID=HOME" */
-/* Typing animation */
-@keyframes typing {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 100%;
-    }
-}
-
-.typing-animation {
-    display: inline-block;
+/* Style untuk Hero Section */
+#home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     overflow: hidden;
-    white-space: nowrap;
-    border-left: 1px solid rgba(155, 155, 155, 0.75);
-    /* Sesuaikan border untuk kursor lebih rapat */
-    animation: typing 4s steps(30) 1s 1 normal both, blink-caret 0.22s step-end infinite;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('Image\image1.jpg') no-repeat center center/cover;
 }
 
-/* Blink effect for the cursor */
-@keyframes blink-caret {
-    50% {
-        border-color: transparent;
-    }
+/* Efek transparansi gambar untuk slide */
+.hero-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Style untuk teks yang ada di atas gambar */
+.hero-content {
+    color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+.hero-content .button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-content .button-container a button {
+    padding: 12px 30px;
+    border-radius: 50px;
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .button-container a button:hover {
+    background-color: #00cc1b;
+}
+
+/* Style untuk slider */
+.carousel-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/* Dots for navigation */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.carousel-dots span {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+.active {
+    background-color: white;
 }
