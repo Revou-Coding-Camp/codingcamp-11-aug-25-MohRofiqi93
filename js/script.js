@@ -158,7 +158,7 @@ window.addEventListener('scroll', () => {
 // Menghandle tombol kirim ke WhatsApp
 document.getElementById('sendWhatsAppBtn').addEventListener('click', function () {
     const message = 'Halo, saya ingin menghubungi Anda melalui WhatsApp.';
-    const phoneNumber = '6285257752793'; // Ganti dengan nomor WhatsApp yang benar (termasuk kode negara)
+    const phoneNumber = '+6285257752793'; // Ganti dengan nomor WhatsApp yang benar (termasuk kode negara)
 
     // Membuka WhatsApp dengan pesan otomatis
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
