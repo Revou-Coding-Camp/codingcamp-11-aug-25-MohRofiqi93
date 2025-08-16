@@ -167,7 +167,7 @@ body {
 
 .icon-container:hover .icon-3d {
     transform: rotate(360deg);
-    /* Rotasi 3D saat hover */
+    transition: transform 0.3s ease;
 }
 
 /* Typing Animation for Text
@@ -455,7 +455,29 @@ body {
     border-right: 2px solid #667eea;
     animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 } */
+/* ============================================================= */
+/* LEBIH RESPONSIVE DI SEMUA WEB DAN SEMUA DEVICE */
 
+/* Membuat grid responsif */
+.grid {
+    grid-template-columns: repeat(1, 1fr);
+    /* 1 kolom di perangkat kecil */
+}
+
+/* .grid.md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 kolom pada perangkat lebih besar */
+}
+
+*/ .grid.md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 kolom pada perangkat lebih besar */
+}
+
+
+
+
+/* ===================================== */
 @keyframes typing {
     from {
         width: 0

@@ -194,6 +194,7 @@ window.addEventListener('load', () => {
 
 
 
+
 // SLIDE BACKROUND
 
 // JavaScript for controlling the carousel
@@ -235,3 +236,6 @@ dots.forEach((dot, index) => {
 
 // Initialize the carousel
 updateCarousel();
+
+
+
